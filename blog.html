@@ -44,6 +44,56 @@
       .photo-card:hover img {
         transform: scale(1.1);
       }
+
+      
+  .music-progress {
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 999px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+  }
+
+  .music-progress::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #22c55e;
+    cursor: pointer;
+    box-shadow: -200px 0 0 200px #22c55e;
+  }
+
+  .music-progress::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border: none;
+    border-radius: 50%;
+    background: #22c55e;
+    cursor: pointer;
+  }
+
+  .music-progress::-moz-range-track {
+    background: rgba(255, 255, 255, 0.12);
+    height: 6px;
+    border-radius: 999px;
+  }
+
+  .music-list-item {
+    transition: all 0.3s ease;
+  }
+
+  .music-list-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .player-active {
+    background: rgba(34, 197, 94, 0.08) !important;
+    border-left: 4px solid #22c55e;
+  }
+</style>
     </style>
   </head>
   <body
@@ -75,7 +125,7 @@
 
     <nav class="max-w-6xl mx-auto px-4 mb-20 sticky top-6 z-50">
       <div
-        class="grid grid-cols-2 md:grid-cols-5 gap-4 p-4 glass rounded-[2rem] shadow-2xl border border-white/10 text-center"
+        class="grid grid-cols-2 md:grid-cols-6 gap-4 p-4 glass rounded-[2rem] shadow-2xl border border-white/10 text-center"
       >
         <a
           href="#biodata"
@@ -126,8 +176,20 @@
           >
         </a>
         <a
+          href="#lagu"
+          class="flex flex-col items-center py-4 bg-green-600/10 hover:bg-green-600/20 rounded-2xl transition-all group"
+        >
+          <i
+            class="fa-solid fa-music text-green-400 text-xl mb-2 group-hover:scale-110 transition-transform"
+          ></i>
+          <span
+            class="text-[11px] font-bold text-white uppercase tracking-wider"
+            >Lagu</span
+          >
+        </a>
+        <a
           href="#album"
-          class="flex flex-col items-center py-4 bg-rose-600/10 hover:bg-rose-600/20 rounded-2xl transition-all col-span-2 md:col-span-1 group"
+          class="flex flex-col items-center py-4 bg-rose-600/10 hover:bg-rose-600/20 rounded-2xl transition-all group"
         >
           <i
             class="fa-solid fa-images text-rose-400 text-xl mb-2 group-hover:scale-110 transition-transform"
@@ -150,7 +212,7 @@
         >
           <div class="relative group shrink-0 mx-auto md:mx-0">
             <img
-              src="foto/may foto edit.jpeg.jpeg"
+              src="foto/may foto edit.jpeg"
               class="relative w-56 h-56 rounded-3xl object-cover border-4 border-slate-800 shadow-2xl"
               alt="Foto Han"
             />
@@ -261,7 +323,8 @@
               Random Forest Algorithm
             </h3>
             <p class="text-slate-400 text-sm mb-8">
-              Project web interaktif untuk memprediksi dropout mahasiswa dengan implementasi algoritma Random Forest.
+              Project web interaktif untuk memprediksi dropout mahasiswa dengan
+              implementasi algoritma Random Forest.
             </p>
             <div class="mt-auto pt-4">
               <a
@@ -322,7 +385,6 @@
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-          <!-- Card 1 -->
           <div
             class="glass rounded-[2rem] p-6 group hover:-translate-y-2 hover:scale-[1.02] hover:border-emerald-400/40 hover:shadow-2xl transition-all duration-300 bg-gradient-to-br from-emerald-500/10 to-transparent"
           >
@@ -343,7 +405,8 @@
 
             <h3 class="text-lg font-bold text-white mb-1">Game HP</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
-              Suka bermain game mobile untuk hiburan, seperti Mobile Legends dan FreeFire.
+              Suka bermain game mobile untuk hiburan, seperti Mobile Legends dan
+              FreeFire.
             </p>
 
             <div class="mt-5">
@@ -374,7 +437,6 @@
             </div>
           </div>
 
-          <!-- Card 2 -->
           <div
             class="glass rounded-[2rem] p-6 group hover:-translate-y-2 hover:scale-[1.02] hover:border-blue-400/40 hover:shadow-2xl transition-all duration-300 bg-gradient-to-br from-blue-500/10 to-transparent"
           >
@@ -393,7 +455,8 @@
 
             <h3 class="text-lg font-bold text-white mb-1">Game Laptop</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
-              Menikmati game di laptop dengan grafik yang memukau, seperti Genshin Impact, RDR2, dan FC25.
+              Menikmati game di laptop dengan grafik yang memukau, seperti
+              Genshin Impact, RDR2, dan FC25.
             </p>
 
             <div class="mt-5">
@@ -424,7 +487,6 @@
             </div>
           </div>
 
-          <!-- Card 3 -->
           <div
             class="glass rounded-[2rem] p-6 group hover:-translate-y-2 hover:scale-[1.02] hover:border-rose-400/40 hover:shadow-2xl transition-all duration-300 bg-gradient-to-br from-rose-500/10 to-transparent"
           >
@@ -443,7 +505,8 @@
 
             <h3 class="text-lg font-bold text-white mb-1">Nonton Film</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
-              Menonton film untuk refreshing sekaligus menikmati cerita dan alur yang menarik, saya lebih menyukai Drakor.
+              Menonton film untuk refreshing sekaligus menikmati cerita dan alur
+              yang menarik, saya lebih menyukai Drakor.
             </p>
 
             <div class="mt-5">
@@ -474,7 +537,6 @@
             </div>
           </div>
 
-          <!-- Card 4 -->
           <div
             class="glass rounded-[2rem] p-6 group hover:-translate-y-2 hover:scale-[1.02] hover:border-purple-400/40 hover:shadow-2xl transition-all duration-300 bg-gradient-to-br from-purple-500/10 to-transparent"
           >
@@ -526,6 +588,308 @@
           </div>
         </div>
       </section>
+
+      <section id="lagu" class="scroll-mt-32">
+  <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+    <span class="w-2 h-8 bg-green-500 rounded-full"></span> Playlist Favorit
+  </h2>
+
+  <p class="text-slate-400 text-sm mb-8 max-w-2xl">
+    Beberapa lagu favorit yang sering saya dengarkan. Dan masih banyak lagi sehingga tiudak bisa saya tampilkan semuanya disini.
+  </p>
+
+  <div class="glass rounded-[2rem] overflow-hidden border border-white/10">
+    <!-- Lagu 1 -->
+    <div class="song-card music-list-item p-4 md:p-5 border-b border-white/5 hover:bg-white/[0.03] transition-all">
+      <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+        <div class="flex items-center gap-4 min-w-0 flex-1">
+          <div class="text-slate-500 font-bold text-sm w-8 text-center">01</div>
+          <img src="cover/lagu1.jpg" alt="Imagination" class="w-16 h-16 rounded-xl object-cover shadow-lg">
+          <div class="min-w-0">
+            <h3 class="text-white font-bold text-base truncate">Imagination</h3>
+            <p class="text-slate-400 text-sm truncate">Shawn Mendes</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 lg:w-[420px]">
+          <button class="play-btn w-11 h-11 rounded-full bg-green-500 hover:bg-green-400 text-black flex items-center justify-center transition-all shrink-0">
+            <i class="fa-solid fa-play"></i>
+          </button>
+
+          <div class="flex-1">
+            <input type="range" class="music-progress progress-bar" value="0" min="0" max="100">
+            <div class="flex justify-between text-[11px] text-slate-400 mt-2">
+              <span class="current-time">0:00</span>
+              <span class="duration">0:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <audio class="audio-player" src="musik/lagu1.mp3"></audio>
+    </div>
+
+    <!-- Lagu 2 -->
+    <div class="song-card music-list-item p-4 md:p-5 border-b border-white/5 hover:bg-white/[0.03] transition-all">
+      <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+        <div class="flex items-center gap-4 min-w-0 flex-1">
+          <div class="text-slate-500 font-bold text-sm w-8 text-center">02</div>
+          <img src="cover/lagu2.jpg" alt="Jika" class="w-16 h-16 rounded-xl object-cover shadow-lg">
+          <div class="min-w-0">
+            <h3 class="text-white font-bold text-base truncate">Jika</h3>
+            <p class="text-slate-400 text-sm truncate">Melly Goeslaw</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 lg:w-[420px]">
+          <button class="play-btn w-11 h-11 rounded-full bg-green-500 hover:bg-green-400 text-black flex items-center justify-center transition-all shrink-0">
+            <i class="fa-solid fa-play"></i>
+          </button>
+
+          <div class="flex-1">
+            <input type="range" class="music-progress progress-bar" value="0" min="0" max="100">
+            <div class="flex justify-between text-[11px] text-slate-400 mt-2">
+              <span class="current-time">0:00</span>
+              <span class="duration">0:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <audio class="audio-player" src="musik/lagu2.mp3"></audio>
+    </div>
+
+    <!-- Lagu 3 -->
+    <div class="song-card music-list-item p-4 md:p-5 border-b border-white/5 hover:bg-white/[0.03] transition-all">
+      <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+        <div class="flex items-center gap-4 min-w-0 flex-1">
+          <div class="text-slate-500 font-bold text-sm w-8 text-center">03</div>
+          <img src="cover/lagu3.jpg" alt="My Heart" class="w-16 h-16 rounded-xl object-cover shadow-lg">
+          <div class="min-w-0">
+            <h3 class="text-white font-bold text-base truncate">My Heart</h3>
+            <p class="text-slate-400 text-sm truncate">Acha Septriasa & Irwansyah</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 lg:w-[420px]">
+          <button class="play-btn w-11 h-11 rounded-full bg-green-500 hover:bg-green-400 text-black flex items-center justify-center transition-all shrink-0">
+            <i class="fa-solid fa-play"></i>
+          </button>
+
+          <div class="flex-1">
+            <input type="range" class="music-progress progress-bar" value="0" min="0" max="100">
+            <div class="flex justify-between text-[11px] text-slate-400 mt-2">
+              <span class="current-time">0:00</span>
+              <span class="duration">0:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <audio class="audio-player" src="musik/lagu3.mp3"></audio>
+    </div>
+
+    <!-- Lagu 4 -->
+    <div class="song-card music-list-item p-4 md:p-5 border-b border-white/5 hover:bg-white/[0.03] transition-all">
+      <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+        <div class="flex items-center gap-4 min-w-0 flex-1">
+          <div class="text-slate-500 font-bold text-sm w-8 text-center">04</div>
+          <img src="cover/lagu4.jpg" alt="Cinta Sejati" class="w-16 h-16 rounded-xl object-cover shadow-lg">
+          <div class="min-w-0">
+            <h3 class="text-white font-bold text-base truncate">Cinta Sejati</h3>
+            <p class="text-slate-400 text-sm truncate">Bunga Citra Lestari</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 lg:w-[420px]">
+          <button class="play-btn w-11 h-11 rounded-full bg-green-500 hover:bg-green-400 text-black flex items-center justify-center transition-all shrink-0">
+            <i class="fa-solid fa-play"></i>
+          </button>
+
+          <div class="flex-1">
+            <input type="range" class="music-progress progress-bar" value="0" min="0" max="100">
+            <div class="flex justify-between text-[11px] text-slate-400 mt-2">
+              <span class="current-time">0:00</span>
+              <span class="duration">0:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <audio class="audio-player" src="musik/lagu4.mp3"></audio>
+    </div>
+
+    <!-- Lagu 5 -->
+    <div class="song-card music-list-item p-4 md:p-5 border-b border-white/5 hover:bg-white/[0.03] transition-all">
+      <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+        <div class="flex items-center gap-4 min-w-0 flex-1">
+          <div class="text-slate-500 font-bold text-sm w-8 text-center">05</div>
+          <img src="cover/lagu5.jpg" alt="About You" class="w-16 h-16 rounded-xl object-cover shadow-lg">
+          <div class="min-w-0">
+            <h3 class="text-white font-bold text-base truncate">About You</h3>
+            <p class="text-slate-400 text-sm truncate">The 1975</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 lg:w-[420px]">
+          <button class="play-btn w-11 h-11 rounded-full bg-green-500 hover:bg-green-400 text-black flex items-center justify-center transition-all shrink-0">
+            <i class="fa-solid fa-play"></i>
+          </button>
+
+          <div class="flex-1">
+            <input type="range" class="music-progress progress-bar" value="0" min="0" max="100">
+            <div class="flex justify-between text-[11px] text-slate-400 mt-2">
+              <span class="current-time">0:00</span>
+              <span class="duration">0:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <audio class="audio-player" src="musik/lagu5.mp3"></audio>
+    </div>
+
+    <!-- Lagu 6 -->
+    <div class="song-card music-list-item p-4 md:p-5 border-b border-white/5 hover:bg-white/[0.03] transition-all">
+      <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+        <div class="flex items-center gap-4 min-w-0 flex-1">
+          <div class="text-slate-500 font-bold text-sm w-8 text-center">06</div>
+          <img src="cover/lagu6.jpg" alt="Wildflower" class="w-16 h-16 rounded-xl object-cover shadow-lg">
+          <div class="min-w-0">
+            <h3 class="text-white font-bold text-base truncate">Wildflower</h3>
+            <p class="text-slate-400 text-sm truncate">Billie Eilish</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 lg:w-[420px]">
+          <button class="play-btn w-11 h-11 rounded-full bg-green-500 hover:bg-green-400 text-black flex items-center justify-center transition-all shrink-0">
+            <i class="fa-solid fa-play"></i>
+          </button>
+
+          <div class="flex-1">
+            <input type="range" class="music-progress progress-bar" value="0" min="0" max="100">
+            <div class="flex justify-between text-[11px] text-slate-400 mt-2">
+              <span class="current-time">0:00</span>
+              <span class="duration">0:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <audio class="audio-player" src="musik/lagu6.mp3"></audio>
+    </div>
+
+    <!-- Lagu 7 -->
+    <div class="song-card music-list-item p-4 md:p-5 border-b border-white/5 hover:bg-white/[0.03] transition-all">
+      <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+        <div class="flex items-center gap-4 min-w-0 flex-1">
+          <div class="text-slate-500 font-bold text-sm w-8 text-center">07</div>
+          <img src="cover/lagu7.jpg" alt="Locked out of Heaven" class="w-16 h-16 rounded-xl object-cover shadow-lg">
+          <div class="min-w-0">
+            <h3 class="text-white font-bold text-base truncate">Locked out of Heaven</h3>
+            <p class="text-slate-400 text-sm truncate">Bruno Mars</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 lg:w-[420px]">
+          <button class="play-btn w-11 h-11 rounded-full bg-green-500 hover:bg-green-400 text-black flex items-center justify-center transition-all shrink-0">
+            <i class="fa-solid fa-play"></i>
+          </button>
+
+          <div class="flex-1">
+            <input type="range" class="music-progress progress-bar" value="0" min="0" max="100">
+            <div class="flex justify-between text-[11px] text-slate-400 mt-2">
+              <span class="current-time">0:00</span>
+              <span class="duration">0:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <audio class="audio-player" src="musik/lagu7.mp3"></audio>
+    </div>
+
+    <!-- Lagu 8 -->
+    <div class="song-card music-list-item p-4 md:p-5 border-b border-white/5 hover:bg-white/[0.03] transition-all">
+      <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+        <div class="flex items-center gap-4 min-w-0 flex-1">
+          <div class="text-slate-500 font-bold text-sm w-8 text-center">08</div>
+          <img src="cover/lagu8.jpg" alt="Cincin" class="w-16 h-16 rounded-xl object-cover shadow-lg">
+          <div class="min-w-0">
+            <h3 class="text-white font-bold text-base truncate">Cincin</h3>
+            <p class="text-slate-400 text-sm truncate">Hindia</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 lg:w-[420px]">
+          <button class="play-btn w-11 h-11 rounded-full bg-green-500 hover:bg-green-400 text-black flex items-center justify-center transition-all shrink-0">
+            <i class="fa-solid fa-play"></i>
+          </button>
+
+          <div class="flex-1">
+            <input type="range" class="music-progress progress-bar" value="0" min="0" max="100">
+            <div class="flex justify-between text-[11px] text-slate-400 mt-2">
+              <span class="current-time">0:00</span>
+              <span class="duration">0:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <audio class="audio-player" src="musik/lagu8.mp3"></audio>
+    </div>
+
+    <!-- Lagu 9 -->
+    <div class="song-card music-list-item p-4 md:p-5 border-b border-white/5 hover:bg-white/[0.03] transition-all">
+      <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+        <div class="flex items-center gap-4 min-w-0 flex-1">
+          <div class="text-slate-500 font-bold text-sm w-8 text-center">09</div>
+          <img src="cover/lagu9.jpg" alt="Multo" class="w-16 h-16 rounded-xl object-cover shadow-lg">
+          <div class="min-w-0">
+            <h3 class="text-white font-bold text-base truncate">Multo</h3>
+            <p class="text-slate-400 text-sm truncate">Cup of Joe</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 lg:w-[420px]">
+          <button class="play-btn w-11 h-11 rounded-full bg-green-500 hover:bg-green-400 text-black flex items-center justify-center transition-all shrink-0">
+            <i class="fa-solid fa-play"></i>
+          </button>
+
+          <div class="flex-1">
+            <input type="range" class="music-progress progress-bar" value="0" min="0" max="100">
+            <div class="flex justify-between text-[11px] text-slate-400 mt-2">
+              <span class="current-time">0:00</span>
+              <span class="duration">0:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <audio class="audio-player" src="musik/lagu9.mp3"></audio>
+    </div>
+
+    <!-- Lagu 10 -->
+    <div class="song-card music-list-item p-4 md:p-5 hover:bg-white/[0.03] transition-all">
+      <div class="flex flex-col lg:flex-row lg:items-center gap-4">
+        <div class="flex items-center gap-4 min-w-0 flex-1">
+          <div class="text-slate-500 font-bold text-sm w-8 text-center">10</div>
+          <img src="cover/lagu10.jpg" alt="Soulmate" class="w-16 h-16 rounded-xl object-cover shadow-lg">
+          <div class="min-w-0">
+            <h3 class="text-white font-bold text-base truncate">Soulmate</h3>
+            <p class="text-slate-400 text-sm truncate">Kahitna</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 lg:w-[420px]">
+          <button class="play-btn w-11 h-11 rounded-full bg-green-500 hover:bg-green-400 text-black flex items-center justify-center transition-all shrink-0">
+            <i class="fa-solid fa-play"></i>
+          </button>
+
+          <div class="flex-1">
+            <input type="range" class="music-progress progress-bar" value="0" min="0" max="100">
+            <div class="flex justify-between text-[11px] text-slate-400 mt-2">
+              <span class="current-time">0:00</span>
+              <span class="duration">0:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <audio class="audio-player" src="musik/lagu10.mp3"></audio>
+    </div>
+  </div>
+</section>
 
       <section id="album" class="scroll-mt-32 pb-40">
         <h2 class="text-2xl font-bold text-white mb-10 flex items-center gap-3">
@@ -1476,5 +1840,89 @@
         class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600/5 blur-[120px]"
       ></div>
     </div>
+
+    <script>
+      const songCards = document.querySelectorAll(".song-card");
+      let currentAudio = null;
+
+      function formatTime(time) {
+        if (isNaN(time)) return "0:00";
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60)
+          .toString()
+          .padStart(2, "0");
+        return `${minutes}:${seconds}`;
+      }
+
+      function resetAllPlayers() {
+        songCards.forEach((card) => {
+          const audio = card.querySelector(".audio-player");
+          const btn = card.querySelector(".play-btn");
+          const icon = btn.querySelector("i");
+          const progress = card.querySelector(".progress-bar");
+          const currentTime = card.querySelector(".current-time");
+
+          audio.pause();
+          audio.currentTime = 0;
+          progress.value = 0;
+          currentTime.textContent = "0:00";
+          icon.className = "fa-solid fa-play";
+          card.classList.remove("player-active");
+        });
+
+        currentAudio = null;
+      }
+
+      songCards.forEach((card) => {
+        const audio = card.querySelector(".audio-player");
+        const btn = card.querySelector(".play-btn");
+        const icon = btn.querySelector("i");
+        const progress = card.querySelector(".progress-bar");
+        const currentTime = card.querySelector(".current-time");
+        const duration = card.querySelector(".duration");
+
+        audio.addEventListener("loadedmetadata", () => {
+          duration.textContent = formatTime(audio.duration);
+        });
+
+        btn.addEventListener("click", () => {
+          if (currentAudio && currentAudio !== audio) {
+            resetAllPlayers();
+          }
+
+          if (audio.paused) {
+            audio.play();
+            icon.className = "fa-solid fa-pause";
+            card.classList.add("player-active");
+            currentAudio = audio;
+          } else {
+            audio.pause();
+            icon.className = "fa-solid fa-play";
+            card.classList.remove("player-active");
+          }
+        });
+
+        audio.addEventListener("timeupdate", () => {
+          if (audio.duration) {
+            progress.value = (audio.currentTime / audio.duration) * 100;
+          }
+          currentTime.textContent = formatTime(audio.currentTime);
+        });
+
+        progress.addEventListener("input", () => {
+          if (audio.duration) {
+            audio.currentTime = (progress.value / 100) * audio.duration;
+          }
+        });
+
+        audio.addEventListener("ended", () => {
+          icon.className = "fa-solid fa-play";
+          progress.value = 0;
+          currentTime.textContent = "0:00";
+          card.classList.remove("player-active");
+          currentAudio = null;
+        });
+      });
+    </script>
   </body>
 </html>
